@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <keyword>
+    <name>Avina</name>
+    <pheonetic>aveena</pheonetic>
+  </keyword>
+  <thisroom>Living Room</thisroom>
+  <room id ="1">
+    <name>Living Room</name>
+    <pheonetic>living room</pheonetic>
+    <actions>
+      <action>
+        <name>Lights</name>
+        <pheonetic>lights</pheonetic>
+        <options>
+          <option id ="1">
+            <name>On</name>
+            <pheonetic>on</pheonetic>
+          </option>
+          <option id ="2">
+            <name>Off</name>
+            <pheonetic>off</pheonetic>
+          </option>
+          <default>On</default>
+        </options>
+      </action>
+      <action skipKeyword="false">
+        <name>Plex</name>
+        <pheonetic>plex</pheonetic>
+        <options>
+          <option id ="3">
+            <name>Play</name>
+            <pheonetic>play</pheonetic>
+          </option>
+          <option id ="4">
+            <name>Pause</name>
+            <pheonetic>pause</pheonetic>
+          </option>
+          <option id ="11">
+            <name>Stop</name>
+            <pheonetic>stop</pheonetic>
+          </option>
+          <option id ="12">
+            <name>Rewind</name>
+            <pheonetic>rewind</pheonetic>
+          </option>
+          <option id ="13">
+            <name>Fast Forward</name>
+            <pheonetic>fast forward</pheonetic>
+          </option>
+          <option id ="14">
+            <name>Select</name>
+            <pheonetic>select</pheonetic>
+          </option>
+          <option id ="15">
+            <name>Back</name>
+            <pheonetic>back</pheonetic>
+          </option>
+          <option id ="16">
+            <name>Up</name>
+            <pheonetic>up</pheonetic>
+          </option>
+          <option id ="17">
+            <name>Down</name>
+            <pheonetic>down</pheonetic>
+          </option>
+          <option id ="18">
+            <name>Left</name>
+            <pheonetic>left</pheonetic>
+          </option>
+          <option id ="19">
+            <name>Right</name>
+            <pheonetic>right</pheonetic>
+          </option>
+          <option id ="20">
+            <name>Page Up</name>
+            <pheonetic>page up</pheonetic>
+          </option>
+          <option id ="21">
+            <name>Page Down</name>
+            <pheonetic>page down</pheonetic>
+          </option>
+        </options>
+      </action>
+    </actions>
+  </room>
+  <room id ="2">
+    <name>Bedroom</name>
+    <pheonetic>bedroom</pheonetic>
+    <actions>
+      <action>
+        <name>Lights</name>
+        <pheonetic>lights</pheonetic>
+        <options>
+          <option id ="5">
+            <name>On</name>
+            <pheonetic>on</pheonetic>
+          </option>
+          <option id ="6">
+            <name>Off</name>
+            <pheonetic>off</pheonetic>
+          </option>
+          <default>On</default>
+        </options>
+      </action>
+      <action>
+        <name>Blanket</name>
+        <pheonetic>blanket</pheonetic>
+        <options>
+          <option id ="5">
+            <name>On</name>
+            <pheonetic>on</pheonetic>
+          </option>
+          <option id ="8">
+            <name>Off</name>
+            <pheonetic>off</pheonetic>
+          </option>
+          <default>On</default>
+        </options>
+      </action>
+    </actions>
+  </room>
+  <room id ="2">
+    <name>Garage</name>
+    <pheonetic>garage</pheonetic>
+    <actions>
+      <action>
+        <name>Door</name>
+        <pheonetic>door</pheonetic>
+        <options>
+          <option id ="9">
+            <name>Open</name>
+            <pheonetic>open</pheonetic>
+          </option>
+          <option id ="10">
+            <name>Close</name>
+            <pheonetic>close</pheonetic>
+          </option>
+        </options>
+      </action>
+    </actions>
+  </room>
+</config>
