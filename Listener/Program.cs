@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+using Plex;
+
 namespace Listener {
     class Program {
         private static Dictionary<string, Command> _phrases = new Dictionary<string, Command>();
@@ -52,7 +54,7 @@ namespace Listener {
                                 new Command(
                                     action.DefaultOption.Id,
                                     string.Format("{0}|{1}|{2}|{3}", _keyword.Name, room.Word.Name, action.Word.Name, action.DefaultOption.Word.Name),
-                                    string.Format("{0}. {1}", _keyword.Pheonetic, action.Word.Pheonetic)
+                                    string.Format("{0} {1}", _keyword.Pheonetic, action.Word.Pheonetic)
                                 )
                             );
 
@@ -60,7 +62,7 @@ namespace Listener {
                                 new Command(
                                     action.DefaultOption.Id,
                                     string.Format("{0}|{1}|{2}|{3}", _keyword.Name, room.Word.Name, action.Word.Name, action.DefaultOption.Word.Name),
-                                    string.Format("{0}. {1} {2}", _keyword.Pheonetic, room.Word.Pheonetic, action.Word.Pheonetic)
+                                    string.Format("{0} {1} {2}", _keyword.Pheonetic, room.Word.Pheonetic, action.Word.Pheonetic)
                                 )
                             );
                         }
@@ -70,7 +72,7 @@ namespace Listener {
                                     new Command(
                                         option.Id,
                                         string.Format("{0}|{1}|{2}|{3}", _keyword.Name, room.Word.Name, action.Word.Name, option.Word.Name),
-                                        string.Format("{0}. {1} {2}", _keyword.Pheonetic, action.Word.Pheonetic, option.Word.Pheonetic)
+                                        string.Format("{0} {1} {2}", _keyword.Pheonetic, action.Word.Pheonetic, option.Word.Pheonetic)
                                     )
                                 );
 
@@ -79,7 +81,7 @@ namespace Listener {
                                             new Command(
                                                 option.Id,
                                                 string.Format("{0}|{1}|{2}|{3}", _keyword.Name, room.Word.Name, action.Word.Name, option.Word.Name),
-                                                string.Format("{0}. {1}", action.Word.Pheonetic, option.Word.Pheonetic)
+                                                string.Format("{0} {1}", action.Word.Pheonetic, option.Word.Pheonetic)
                                             )
                                         );
                             }
@@ -91,7 +93,7 @@ namespace Listener {
                                 new Command(
                                     option.Id,
                                     string.Format("{0}|{1}|{2}|{3}", _keyword.Name, room.Word.Name, action.Word.Name, option.Word.Name),
-                                    string.Format("{0}. {1} {2} {3}", _keyword.Pheonetic, room.Word.Pheonetic, action.Word.Pheonetic, option.Word.Pheonetic)
+                                    string.Format("{0} {1} {2} {3}", _keyword.Pheonetic, room.Word.Pheonetic, action.Word.Pheonetic, option.Word.Pheonetic)
                                 )
                             );
                     }
@@ -191,43 +193,43 @@ namespace Listener {
         private static void SendCommand(int id) {
             switch (id) {
                 case 3:
-                    Plex.Manager.GetPlayer().Play();
+                    (new Plex.Server("quora")).GetPlayer().Play();
                     break;
                 case 4:
-                    Plex.Manager.GetPlayer().Pause();
+                    (new Plex.Server("quora")).GetPlayer().Pause();
                     break;
                 case 11:
-                    Plex.Manager.GetPlayer().Stop();
+                    (new Plex.Server("quora")).GetPlayer().Stop();
                     break;
                 case 12:
-                    Plex.Manager.GetPlayer().Rewind();
+                    (new Plex.Server("quora")).GetPlayer().Rewind();
                     break;
                 case 13:
-                    Plex.Manager.GetPlayer().FastForward();
+                    (new Plex.Server("quora")).GetPlayer().FastForward();
                     break;
                 case 14:
-                    Plex.Manager.GetPlayer().Select();
+                    (new Plex.Server("quora")).GetPlayer().Select();
                     break;
                 case 15:
-                    Plex.Manager.GetPlayer().Back();
+                    (new Plex.Server("quora")).GetPlayer().Back();
                     break;
                 case 16:
-                    Plex.Manager.GetPlayer().Up();
+                    (new Plex.Server("quora")).GetPlayer().Up();
                     break;
                 case 17:
-                    Plex.Manager.GetPlayer().Down();
+                    (new Plex.Server("quora")).GetPlayer().Down();
                     break;
                 case 18:
-                    Plex.Manager.GetPlayer().Left();
+                    (new Plex.Server("quora")).GetPlayer().Left();
                     break;
                 case 19:
-                    Plex.Manager.GetPlayer().Right();
+                    (new Plex.Server("quora")).GetPlayer().Right();
                     break;
                 case 20:
-                    Plex.Manager.GetPlayer().PageUp();
+                    (new Plex.Server("quora")).GetPlayer().PageUp();
                     break;
                 case 21:
-                    Plex.Manager.GetPlayer().PageDown();
+                    (new Plex.Server("quora")).GetPlayer().PageDown();
                     break;
             }
         }

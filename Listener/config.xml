@@ -2,7 +2,7 @@
 <config>
   <keyword>
     <name>Avina</name>
-    <pheonetic>aveena</pheonetic>
+    <pheonetic>aveena.</pheonetic>
   </keyword>
   <thisroom>Living Room</thisroom>
   <room id ="1">
@@ -24,7 +24,7 @@
           <default>On</default>
         </options>
       </action>
-      <action skipKeyword="false">
+      <action skipKeyword="true">
         <name>Plex</name>
         <pheonetic>plex</pheonetic>
         <options>
